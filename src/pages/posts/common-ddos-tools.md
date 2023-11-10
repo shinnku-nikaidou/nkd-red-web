@@ -1,4 +1,11 @@
-# #technology Make effective ddos attack
+---
+layout: '@/templates/BasePost.astro'
+title: Make effective ddos attack
+pubDate: 2023-11-01T00:00:00Z
+imgSrc: '/img/posts/common-ddos-tools/slowlori-1.png'
+imgAlt: 'common ddos tools'
+---
+# Make effective ddos attack
 
 ## content
 
@@ -55,7 +62,7 @@ webBenchmark -c [COUNT] -s [URL] -r [REFERER]
 
 what is slowloris: [cloudflare link](https://www.cloudflare.com/learning/ddos/ddos-attack-tools/slowloris/)
 
-![](/img/posts/2023-11-01-common-ddos-tools/slowlori-1.png)
+![](/img/posts/common-ddos-tools/slowlori-1.png)
 
 ## 如何绕过 CDN 找到源站
 
