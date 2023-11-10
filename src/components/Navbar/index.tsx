@@ -1,7 +1,7 @@
 import { Logo } from "@/components/Logo";
-import { NavMenu } from "@/components/NavMenu";
-import { NavMenuItem } from "@/components/NavMenuItem";
-import { NavbarTwoColumns } from "@/components/NavbarTwoColumns";
+import { NavMenu } from "./NavMenu";
+import { NavMenuItem } from "./NavMenuItem";
+import { NavbarTwoColumns } from "./NavbarTwoColumns";
 import { Section } from "@/components/Section";
 
 const Navbar = () => (
@@ -32,8 +32,10 @@ const Navbar = () => (
 
       <NavMenu>
         <NavMenuItem href="/posts/">Blogs</NavMenuItem>
-        <NavMenuItem href="/">GitHub</NavMenuItem>
-        <NavMenuItem href="/">Twitter</NavMenuItem>
+        <NavMenuItem href="https://github.com/shinnku-nikaidou">
+          GitHub
+        </NavMenuItem>
+        <NavMenuItem href="https://t.me/shinnkunikaidou">Telegram</NavMenuItem>
       </NavMenu>
     </NavbarTwoColumns>
   </Section>

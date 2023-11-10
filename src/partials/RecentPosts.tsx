@@ -1,4 +1,4 @@
-import { BlogGallery } from "@/components/BlogGallery";
+import { BlogGallery } from "@/components/pages/BlogGallery";
 import { GradientText } from "@/components/GradientText";
 import { Section } from "@/components/Section";
 import type { IFrontmatter } from "@/types/IFrontMatter";

@@ -1,7 +1,7 @@
 import type { MarkdownInstance } from "astro";
-// import { format } from "date-fns";
+import { format } from "date-fns";
 
-import type { IFrontmatter } from "../types/IFrontMatter";
+import type { IFrontmatter } from "../../types/IFrontMatter";
 
 type IBlogCardProps = {
   instance: MarkdownInstance<IFrontmatter>;
@@ -9,7 +9,7 @@ type IBlogCardProps = {
 
 const BlogCard = (props: IBlogCardProps) => (
   <a className="hover:translate-y-1" href={props.instance.url}>
-    <div className="overflow-hidden rounded-md bg-slate-800">
+    <div className="overflow-hidden rounded-md">
       <div className="aspect-w-3 aspect-h-2">
         <img
           className="h-full w-full object-cover object-center"
@@ -24,8 +24,8 @@ const BlogCard = (props: IBlogCardProps) => (
           {props.instance.frontmatter.title}
         </h2>
 
-        <div className="mt-1 text-xs text-gray-400">
-          {/* {format(new Date(props.instance.frontmatter.pubDate), "LLL d, yyyy")} */}
+        <div className="mt-1 text-xs text-gray-500">
+          {format(new Date(props.instance.frontmatter.pubDate), "LLL d, yyyy")}
         </div>
 
         <div className="mt-2 text-sm">

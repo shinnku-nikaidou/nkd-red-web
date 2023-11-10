@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import type { IFrontmatter } from "../types/IFrontMatter";
+import type { IFrontmatter } from "@/types/IFrontMatter";
 
 type IPostContentProps = {
   content: IFrontmatter;
@@ -18,7 +18,7 @@ const PostContent = (props: IPostContentProps) => (
       />
     </div>
 
-    <div className="prose prose-invert mt-8 prose-img:rounded-lg">
+    <div className="prose mt-8 prose-img:rounded-lg">
       {props.children}
     </div>
   </div>

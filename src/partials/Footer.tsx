@@ -7,7 +7,7 @@ type IFooterCopyrightProps = {
 
 const FooterCopyright = (props: IFooterCopyrightProps) => (
   <div className="border-t border-gray-600 pt-5">
-    <div className="text-sm text-gray-200">
+    <div className="text-sm text-gray-400">
       © Copyright {new Date().getFullYear()} by {props.site_name}. Built with ♥
       <a
         className="text-cyan-400 hover:underline"

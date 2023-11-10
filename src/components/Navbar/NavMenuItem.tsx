@@ -5,8 +5,8 @@ type INavMenuItemProps = {
 };
 
 const NavMenuItem = (props: INavMenuItemProps) => (
-  <li className="hover:text-white">
-    <a href={props.href} target={props.target || "_self"}>
+  <li className="hover:text-blue-400">
+    <a href={props.href} target={props.target || "_blank"}>
       {props.children}
     </a>
   </li>
