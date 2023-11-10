@@ -1,7 +1,14 @@
 ---
+import "@/css/index.css"
 import type { FrontmatterPage, IFrontmatter } from "@/types/IFrontMatter";
 import { sortByDate } from "@/utils/Posts";
 import { AppConfig } from "@/utils/AppConfig";
+import { BlogGallery } from "@/components/BlogGallery";
+import { NewerOlderPagination } from "@/components/NewerOlderPagination";
+import { PaginationHeader } from "@/components/PaginationHeader";
+import { Section } from "@/components/Section";
+import { CTA } from "@/partials/CTA";
+import Base from "@/templates/Base.astro";
 
 type GetStaticPaths = {
   paginate: any;
