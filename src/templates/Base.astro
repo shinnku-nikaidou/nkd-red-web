@@ -2,6 +2,7 @@
 import { Footer } from "@/partials/Footer";
 import { Navbar } from "@/components/Navbar";
 import { AppConfig } from "@/utils/AppConfig";
+import ThemeIcon from "@/components/ThemeIcon.astro";
 
 export interface Props {
   head: {
@@ -26,12 +27,56 @@ const {
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   </head>
-  <!-- <body class="bg-slate-900 text-gray-100"> -->
   <body>
     <Navbar />
+    <ThemeIcon />
 
     <slot />
 
     <Footer />
+
+    <button id="backToTop" class="back-to-top">↑ Top</button>
   </body>
 </html>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #f8f8f8;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+  }
+</style>
+
+<script>
+  const backToTopButton = document.getElementById("backToTop")!;
+
+  // 当用户滚动页面时
+  window.onscroll = function () {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  };
+
+  // 当用户点击按钮时
+  backToTopButton.onclick = function () {
+    document.body.scrollTop = 0; // 对于 Safari
+    document.documentElement.scrollTop = 0; // 对于 Chrome, Firefox, IE 和 Opera
+  };
+</script>

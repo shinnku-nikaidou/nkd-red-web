@@ -18,7 +18,7 @@ const PostContent = (props: IPostContentProps) => (
       />
     </div>
 
-    <div className="prose mt-8 prose-img:rounded-lg">
+    <div className="prose dark:prose-invert mt-8 prose-img:rounded-lg">
       {props.children}
     </div>
   </div>
