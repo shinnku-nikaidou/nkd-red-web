@@ -1,5 +1,5 @@
 import { GradientText } from "@/components/GradientText";
-import { Project } from "@/components/home/Project";
+import { Project } from "@/components/intro.tsx/Project";
 import { Section } from "@/components/Section";
 import { Tags, ColorTags } from "@/components/Tags";
 

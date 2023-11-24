@@ -1,5 +1,5 @@
 ---
-layout: '@/templates/BasePost.astro'
+layout: '@/partials/BasePost.astro'
 title: Make effective ddos attack
 pubDate: 2023-11-01T00:00:00Z
 imgSrc: '/img/posts/common-ddos-tools/slowlori-1.png'

@@ -12,7 +12,7 @@ type IProjectProps = {
 };
 
 const Project = (props: IProjectProps) => (
-  <div className="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row">
+  <div className="flex flex-col items-center gap-x-8 rounded-md bg-slate-200 dark:bg-slate-800 p-3 md:flex-row">
     <div className="shrink-0">
       <a href={props.link}>
         <img
