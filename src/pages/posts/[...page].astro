@@ -4,7 +4,6 @@ import type { FrontmatterPage, IFrontmatter } from "@/types/IFrontMatter";
 import { sortByDate } from "@/utils/Posts";
 import { AppConfig } from "@/utils/AppConfig";
 import { BlogGallery } from "@/components/pages/BlogGallery";
-import { NewerOlderPagination } from "@/components/NewerOlderPagination";
 import { PaginationHeader } from "@/components/PaginationHeader";
 import { Section } from "@/components/Section";
 import { CTA } from "@/partials/CTA";
@@ -47,7 +46,10 @@ const description =
   </Section>
 
   <Section>
-    <NewerOlderPagination page={page} />
+    <div class-name="flex justify-center gap-8">
+      {page.url.prev && <a href={page.url.prev}>← Newer Posts</a>}
+      {page.url.next && <a href={page.url.next}>Older Posts →</a>}
+    </div>
   </Section>
 
   <CTA />
