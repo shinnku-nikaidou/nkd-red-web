@@ -4,41 +4,41 @@ import type { FrontmatterPage, IFrontmatter } from "@/types/IFrontMatter";
 import { sortByDate } from "@/utils/Posts";
 import { AppConfig } from "@/utils/AppConfig";
 import { BlogGallery } from "@/components/pages/BlogGallery";
-import { PaginationHeader } from "@/components/PaginationHeader";
 import { Section } from "@/components/Section";
 import { CTA } from "@/partials/CTA";
 import Base from "@/partials/Base.astro";
+import type { GetStaticPaths } from "astro";
 
-type GetStaticPaths = {
-  paginate: any;
-}; // Overrides `GetStaticPathsOptions` types from Astro
-
-export async function getStaticPaths({ paginate }: GetStaticPaths) {
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
   const allPosts = await Astro.glob<IFrontmatter>("./*.md");
+
   const sortedPosts = sortByDate(allPosts);
+  // console.log(JSON.stringify(paginate(sortedPosts, { pageSize: 6 })));
 
   // Return a paginated collection of paths for all posts
   return paginate(sortedPosts, { pageSize: 6 });
-}
+};
 
 interface Props {
   page: FrontmatterPage;
 }
 
-const { page } = Astro.props as Props;
-const titleSuffix = ` - ${AppConfig.site_name}`;
-const titleBase = `Blog page ${page.currentPage}`;
-const title = titleBase + titleSuffix;
-const description =
-  "Pagination example built with Astro styled with Tailwind CSS.";
+console.log(JSON.stringify(Astro.props));
+
+const page = Astro.props.page;
+const title = `Blog page ${page.currentPage} - ${AppConfig.site_name}`;
+const description = "Pagination with tailwind";
 ---
 
 <Base head={{ title, description }}>
   <Section>
-    <PaginationHeader
-      title="Random title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    />
+    <div class-name="text-center">
+      <h1 class-Name="text-3xl font-bold">"Random title here"</h1>
+
+      <div class-Name="mt-3 text-gray-500">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      </div>
+    </div>
   </Section>
 
   <Section>
