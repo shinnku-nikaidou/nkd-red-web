@@ -21,7 +21,7 @@ const useCounterState = create<CounterState>()(
   )
 );
 
-export default function Counter({ children }: { children: JSX.Element }) {
+export default function CounterMain({ children }: { children: JSX.Element }) {
   const [initCount, setInitCount] = useState<number>(0);
   const { count, setCount } = useCounterState();
   useEffect(() => {

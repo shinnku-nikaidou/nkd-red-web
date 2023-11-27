@@ -1,0 +1,30 @@
+---
+import "@/styles/index.css";
+import CounterMain from "@components/Counter";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href="/shinnku.jpg" />
+    <style>
+      html,
+      body {
+        font-family: system-ui;
+        margin: 0;
+      }
+      body {
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <CounterMain client:visible>
+        <h1>Hello, world!</h1>
+      </CounterMain>
+    </main>
+  </body>
+</html>
