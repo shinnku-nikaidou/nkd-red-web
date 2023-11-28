@@ -5,7 +5,6 @@ pubDate: 2023-11-28T05:30:00Z
 imgSrc: "/img/posts/diffusion-models-basic/celeba.png"
 imgAlt: "Generated samples on CelebA-HQ 256 × 256"
 ---
-
 # Diffusion Probabilistic Models
 
 原论文都有详细内容啦，这里就只是随便写写。 ps: [【论文链接】](https://r2.nkd.red/papers/diffusion-model/2006.11239.pdf)
@@ -14,7 +13,7 @@ imgAlt: "Generated samples on CelebA-HQ 256 × 256"
 
 这是论文摘要：（复制粘贴，复制粘贴）
 
-We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from **nonequilibrium thermodynamics**.
+We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from [**nonequilibrium thermodynamics**](https://zh.wikipedia.org/zh-cn/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%85%8B%E7%86%B1%E5%8A%9B%E5%AD%B8).
 
 Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score matching with Langevin dynamics, and our models naturally admit a progressive lossy decompression scheme that can be interpreted as a generalization of autoregressive decoding.
 
