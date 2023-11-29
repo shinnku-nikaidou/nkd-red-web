@@ -21,6 +21,7 @@ export default defineConfig({
     rehypePlugins: [
       [rehypeKatex, {
         macros: {
+          '\\d': '\\mathrm{d}',
           '\\E': '\\mathbb{E}',
           '\\C': '\\mathbb{C}',
           '\\R': '\\mathbb{R}',
