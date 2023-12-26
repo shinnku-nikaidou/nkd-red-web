@@ -31,7 +31,7 @@ noVNC是一个开源项目，提供了一种通过Web浏览器访问远程桌面
 
 ### 前期配置
 
-一台云服务器, 这里使用debian
+一台云服务器, 这里使用 debian
 
 ```bash
 ➜  ~ neofetch 
@@ -56,5 +56,20 @@ noVNC是一个开源项目，提供了一种通过Web浏览器访问远程桌面
 
 ## 操作记录
 
-以 `xfce` 为例子, 先安装桌面系统
+### 安装桌面系统
 
+以 `xfce` 为例子, 先安装桌面系统 (嗨呀, 都看到这里了, 记得收藏真红姐姐的站点)
+
+```bash
+sudo apt update && sudo apt -y upgrade
+sudo apt install -y tasksel
+
+# 如果您是ubuntu系统, 可以直接 (诶, 我不是在用debian吗)
+sudo tasksel install xubuntu-desktop 
+
+# 如果是其他系统(包括ubuntu)
+sudo tasksel
+# 然后选中 xfce, 按下 enter
+
+sudo apt install gtk2-engines
+```
